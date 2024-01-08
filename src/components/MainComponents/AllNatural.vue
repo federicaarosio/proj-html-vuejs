@@ -37,11 +37,11 @@ section.container {
     width: $small-container;
     margin: 0 auto;
     @include flex(row, space-between, center);
+    gap: 20px;
     margin-bottom: $margin-bottom-small;
 
     img {
         width: calc((100% / 4) - 20px);
-        margin: 0 10px;
     }
 
     div.sub-container {

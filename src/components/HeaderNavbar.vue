@@ -61,16 +61,6 @@ export default {
                     @include flex(row, center, center);
                     gap: 20px;
 
-                    button {
-                        border: none;
-                        background-color: $accent-color;
-                        color: white;
-                        padding: 15px;
-                        font-family: 'Roboto Condensed', sans-serif;
-                        text-transform: uppercase;
-                        border-top-right-radius: 20px;
-                        border-bottom-left-radius: 20px;
-                    }
                 }
             }
         }

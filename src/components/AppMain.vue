@@ -12,6 +12,7 @@ export default {
         AllNatural,
         OnlineStore,
     },
+    
 }
 </script>
 

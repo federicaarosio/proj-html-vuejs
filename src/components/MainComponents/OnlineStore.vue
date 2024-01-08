@@ -24,10 +24,10 @@
             </li>
         </ul>
 
-        <div class="shop-images-container">
+        <div class="shop-images-container">           
 
             <div class="single-product-card" v-for="product in productsList">
-                <img :src="product.imageSource">
+                <img :src="`../../../img/${product.imageSource}.jpg`">
                 <p class="product-name">
                     {{product.productName}}
                 </p>
@@ -35,6 +35,8 @@
                     {{product.price}}
                 </p>
             </div>
+
+            <button>All Products</button>
         </div>
     </section>        
 </template>
@@ -49,43 +51,44 @@ export default {
             productsList: [
                 {
                     productName: "Fress Apple",
-                    imageSource: "../../assets/img/s5-150x150.jpg",
+                    imageSource: "s5",
                     price: "$10",
                 },
                 {
                     productName: "Fress Cobies",
-                    imageSource: "../../assets/img/s2-150x150.jpg",
+                    imageSource: "s2",
+                    price: "$15"
+                },
+                {
+                    productName: "Fress Watermelon",
+                    imageSource: "s8",
+                    price: "$14"
+                },
+                {
+                    productName: "Organic Juice",
+                    imageSource: "s1",
                     price: "$17"
                 },
                 {
-                    productName: "Fress Cobies",
-                    imageSource: "../../assets/img/s2-150x150.jpg",
-                    price: "$17"
+                    productName: "Fresh BlueBerries",
+                    imageSource: "s4",
+                    price: "$15"
                 },
                 {
-                    productName: "Fress Cobies",
-                    imageSource: "../../assets/img/s2-150x150.jpg",
-                    price: "$17"
+                    productName: "Organic Letus",
+                    imageSource: "s10",
+                    price: "$23"
                 },
                 {
-                    productName: "Fress Cobies",
-                    imageSource: "../../assets/img/s2-150x150.jpg",
-                    price: "$17"
+                    productName: "Red Gajor",
+                    imageSource: "s9",
+                    price: "$26"
                 },
                 {
-                    productName: "Fress Cobies",
-                    imageSource: "../../assets/img/s2-150x150.jpg",
-                    price: "$17"
-                },
-                {
-                    productName: "Fress Cobies",
-                    imageSource: "../../assets/img/s2-150x150.jpg",
-                    price: "$17"
-                },
-                {
-                    productName: "Fress Cobies",
-                    imageSource: "../../assets/img/s2-150x150.jpg",
-                    price: "$17"
+                    productName: "Naga Pepper",
+                    imageSource: "s7",
+                    price: "$21",
+                    // noDiscountedPrice: "n",
                 }
             ]
         }
@@ -106,6 +109,8 @@ section.online-store {
     text-align: center;
     color: $white;
     font-weight: 800;
+    padding-top: $margin-bottom-large;
+    padding-bottom: $margin-bottom-large;
 
     p.smaller-title {
         font-size: 1.2rem;
@@ -139,10 +144,11 @@ section.online-store {
 
         .single-product-card {
             width: calc((100% /4) - 20px);
-            background-color: lightcoral;
+            margin-bottom: $margin-bottom-small;
 
             img {
                 width: 100%
+
             };
         }
     }
