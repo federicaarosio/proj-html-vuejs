@@ -7,12 +7,22 @@
                     <li class="menu-list" v-for="link in navLinks">{{link.content}}</li>
                 </ul>
             </div>
-            <div class="button">b</div>
+
+            <div class="sub-container">
+                <div class="search-menu">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <button>
+                        order now
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 </template>
 <script>
 export default {
+    name: "HeaderNavbar",
     props: {
         navLinks: {
             type: Array,
@@ -40,12 +50,28 @@ export default {
             .sub-container {
                 @include flex(row, center, center);
                 gap: 70px;
-            }
 
-            ul {
-                list-style: none;
-                @include flex(row, center, center);
-                gap: 30px;
+                ul {
+                    list-style: none;
+                    @include flex(row, center, center);
+                    gap: 30px;
+                }
+
+                .search-menu {
+                    @include flex(row, center, center);
+                    gap: 20px;
+
+                    button {
+                        border: none;
+                        background-color: $accent-color;
+                        color: white;
+                        padding: 15px;
+                        font-family: 'Roboto Condensed', sans-serif;
+                        text-transform: uppercase;
+                        border-top-right-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                    }
+                }
             }
         }
     }

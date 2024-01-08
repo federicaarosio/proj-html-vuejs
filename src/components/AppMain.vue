@@ -1,13 +1,16 @@
 <template lang="">
-    <h2>
-       AppMain 
-    </h2>
+    <AllNatural />
 </template>
+
 <script>
+import AllNatural from './MainComponents/AllNatural.vue';
 export default {
-    
+    components: {
+        AllNatural,
+    },
 }
 </script>
+
 <style lang="">
     
 </style>

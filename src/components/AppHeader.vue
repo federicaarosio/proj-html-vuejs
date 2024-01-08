@@ -25,15 +25,18 @@
         </section>
 
         <HeaderNavbar  :navLinks="navLinks"/>
+        <AppJumbo />
     
     </section>
 </template>
 
 <script>
 import HeaderNavbar from './HeaderNavbar.vue';
+import AppJumbo from './AppJumbo.vue';
 export default {
     components: {
-        HeaderNavbar
+        HeaderNavbar,
+        AppJumbo
     },
 
     data() {
@@ -46,21 +49,27 @@ export default {
                 },
                 {
                     content: 'About',
+                    url: '#',
                 },
                 {
                     content: 'Service',
+                    url: '#',
                 },
                 {
                     content: 'Portfolio',
+                    url: '#',
                 },
                 {
                     content: 'Shop',
+                    url: '#',
                 },
                 {
                     content: 'Blog',
+                    url: '#',
                 },
                 {
                     content: 'Contact',
+                    url: '#',
                 },
             ],
         }
