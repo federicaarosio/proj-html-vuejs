@@ -24,27 +24,31 @@
             </li>
         </ul>
 
-        <div class="shop-images-container">           
+        <div class="shop-images-container">
+            
+            <SingleProduct v-for="product in productsList"
+            :src="product.imageSource"
+            :name="product.productName"
+            :price="product.price"
+            />
 
-            <div class="single-product-card" v-for="product in productsList">
-                <img :src="`../../../img/${product.imageSource}.jpg`">
-                <p class="product-name">
-                    {{product.productName}}
-                </p>
-                <p class="product-price">
-                    {{product.price}}
-                </p>
-            </div>
-
-            <button>All Products</button>
+            <button>
+                All Products
+            </button>
         </div>
     </section>        
 </template>
 
 
 <script>
+import SingleProduct from './SingleProduct.vue';
+
 export default {
     name: "OnlineStore",
+
+    components: {
+        SingleProduct,
+    },
 
     data() {
         return {
@@ -111,6 +115,7 @@ section.online-store {
     font-weight: 800;
     padding-top: $margin-bottom-large;
     padding-bottom: $margin-bottom-large;
+    margin-bottom: $margin-bottom-large;
 
     p.smaller-title {
         font-size: 1.2rem;
@@ -140,17 +145,7 @@ section.online-store {
         margin: 0 auto;
         @include flex(row, center, center);
         gap: 20px;
-        flex-wrap: wrap;
-
-        .single-product-card {
-            width: calc((100% /4) - 20px);
-            margin-bottom: $margin-bottom-small;
-
-            img {
-                width: 100%
-
-            };
-        }
+        flex-wrap: wrap;        
     }
 }
 </style>
