@@ -24,17 +24,47 @@
             </div>
         </section>
 
-        <AppMenu />
+        <HeaderNavbar  :navLinks="navLinks"/>
     
     </section>
 </template>
 
 <script>
-import AppMenu from './AppMenu.vue';
+import HeaderNavbar from './HeaderNavbar.vue';
 export default {
     components: {
-        AppMenu
-    }
+        HeaderNavbar
+    },
+
+    data() {
+        return {
+            //Header Navbar
+            navLinks: [
+                {
+                    content: 'Home',
+                    url: '#',
+                },
+                {
+                    content: 'About',
+                },
+                {
+                    content: 'Service',
+                },
+                {
+                    content: 'Portfolio',
+                },
+                {
+                    content: 'Shop',
+                },
+                {
+                    content: 'Blog',
+                },
+                {
+                    content: 'Contact',
+                },
+            ],
+        }
+    },
 }
 </script>
 
@@ -53,7 +83,7 @@ export default {
 
         div.container {
             @include flex(row, space-between, center);
-            width: 85%;
+            width: $large-container;
             margin: 0 auto;
             font-size: $font-small;
         }
