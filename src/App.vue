@@ -22,4 +22,9 @@ export default {
 
 <style lang="scss">
   @use './styles/general.scss' as *;
+
+  @use "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss" as *;
+  @use "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss" as *;
+  @use "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss" as *;
+  @use "../node_modules//@fortawesome/fontawesome-free/scss/regular.scss" as *;
 </style>
