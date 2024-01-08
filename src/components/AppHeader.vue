@@ -51,11 +51,16 @@ export default {
             @include flex(row, space-between, center);
             width: 85%;
             margin: 0 auto;
+            font-size: $font-small;
         }
 
         .header-contacts, .header-hours-socials {
             @include flex(row, space-between, center);
             gap: 20px;
+
+            .fa-brands {
+                margin-left: 10px;
+            }
         }
     }
     
