@@ -23,17 +23,21 @@
                 </div>
             </div>
         </section>
+
+        <AppMenu />
     
-        <section class="navbar">
-    
-        </section>
     </section>
 </template>
+
 <script>
+import AppMenu from './AppMenu.vue';
 export default {
-    
+    components: {
+        AppMenu
+    }
 }
 </script>
+
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixins" as *;
