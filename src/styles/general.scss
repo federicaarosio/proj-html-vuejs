@@ -1,0 +1,10 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+
+* {
+    @include reset;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}

@@ -1,11 +1,26 @@
 <template lang="">
     <section class="header">
         <section class="info-contacts">
-            <div>
-                North
-            </div>
-            <div>
-                orario
+            <div class="container">
+                <div class="header-contacts">
+                    <div>
+                        <i class="fa-solid fa-location-dot"></i> North baukhula, tala, USA
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-envelope"></i> demo@example.com
+                    </div>   
+                </div>
+                <div class="header-hours-socials">
+                    <div>
+                        <i class="fa-regular fa-clock"></i> 8.30AM-8.30PM
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </div>   
+                </div>
             </div>
         </section>
     
@@ -28,9 +43,20 @@ export default {
     }
 
     section.info-contacts {
-        @include flex(row, space-between, center);
+        
         background-color: $main-color;
-        height: 20px;
+        padding: 10px 0;
+
+        div.container {
+            @include flex(row, space-between, center);
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .header-contacts, .header-hours-socials {
+            @include flex(row, space-between, center);
+            gap: 20px;
+        }
     }
     
 </style>
