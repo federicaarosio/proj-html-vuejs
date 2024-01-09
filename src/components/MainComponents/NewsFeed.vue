@@ -88,6 +88,8 @@ section.news {
             font-weight: 800;
             color: $accent-color;
             text-align: center;
+            position: relative;
+            z-index: 2;
         }
     
         .lower-title {
@@ -96,6 +98,8 @@ section.news {
             color: $main-color;
             text-align: center;
             text-transform: uppercase;
+            position: relative;
+            z-index: 2;
             margin-bottom: $margin-bottom-small;
             
             span {
@@ -107,7 +111,7 @@ section.news {
     }
 
     div.feed-container {
-        @include flex(row, center, center);
+        @include flex(row, space-between, center);
         gap: 20px;
         flex-wrap: wrap;
     }
