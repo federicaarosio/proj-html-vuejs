@@ -2,6 +2,58 @@ import { reactive } from 'vue'
 
 export const store = reactive({
     
+    //Product List (Online Store, Trending Food)
+    productsList: [
+        {
+            productName: "Fress Apple",
+            imageSource: "s5",
+            price: "$10",
+            trending: true,
+        },
+        {
+            productName: "Fress Cobies",
+            imageSource: "s2",
+            price: "$15",
+            trending: true,
+        },
+        {
+            productName: "Fress Watermelon",
+            imageSource: "s8",
+            price: "$14",
+            trending: true,
+        },
+        {
+            productName: "Organic Juice",
+            imageSource: "s1",
+            price: "$17",
+            trending: true,
+        },
+        {
+            productName: "Fresh BlueBerries",
+            imageSource: "s4",
+            price: "$15",
+            trending: false,
+        },
+        {
+            productName: "Organic Letus",
+            imageSource: "s10",
+            price: "$23",
+            trending: false,
+        },
+        {
+            productName: "Red Gajor",
+            imageSource: "s9",
+            price: "$26",
+            trending: false,
+        },
+        {
+            productName: "Naga Pepper",
+            imageSource: "s7",
+            price: "$21",
+            trending: false,
+        }
+    ],
+
     //Blog Posts
     postsList: [
         {
