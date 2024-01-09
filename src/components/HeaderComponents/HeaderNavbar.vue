@@ -2,7 +2,7 @@
     <section class="menu">
         <div class="container">
             <div class="sub-container">
-                <img src="../assets/img/logo.png" alt="logo Gogrin" class="logo" >
+                <img src="../../assets/img/logo.png" alt="logo Gogrin" class="logo" >
                 <ul class="menu">
                     <li class="menu-list" v-for="link in navLinks">{{link.content}}</li>
                 </ul>
@@ -32,8 +32,8 @@ export default {
 }
 </script>
 <style lang="scss">
-@use "../styles/partials/variables" as *;
-@use "../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
     section.menu {
         color: $dark-gray;

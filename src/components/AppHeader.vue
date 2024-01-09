@@ -31,8 +31,8 @@
 </template>
 
 <script>
-import HeaderNavbar from './HeaderNavbar.vue';
-import AppJumbo from './AppJumbo.vue';
+import HeaderNavbar from './HeaderComponents/HeaderNavbar.vue';
+import AppJumbo from './HeaderComponents/AppJumbo.vue';
 export default {
     components: {
         HeaderNavbar,
