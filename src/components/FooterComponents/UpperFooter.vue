@@ -2,7 +2,7 @@
     <section class="upper-footer">
         <div class="container">
             <div class="column">
-                <img src="../../assets/img/footer-logo.png" alt="logo">
+                <img src="../../assets/img/footer-logo.png" alt="logo" class="logo">
                 <p class="text">
                     We should never be entered upon until every agency of peace has failed not to be good
                 </p>
@@ -14,12 +14,17 @@
                 <p class="title">
                     Emergency link.
                 </p>
+                <ul>
+                    <li v-for="link in store.footerLinks">
+                        {{link.content}}
+                    </li>
+                </ul>
             </div>
             <div class="column">
                 <p class="title">
                     Our latest blog.
                 </p>
-                <div class="blog-container" v-for="post in store.postsList">
+                <div class="blog-container" v-for="(post, index) in store.postsList" :key="store.id" v-show="index < 2">
                     <img :src="`../../../img/${post.imageSource}.jpg`">
                     <div class="text-wrapper">
                         <p class="post-title">
@@ -35,6 +40,14 @@
                 <p class="title">
                     Our gallery.
                 </p>
+                <div class="gallery-container">
+                    <img src="../../assets/img/blo1-70x70.jpg" alt="organic products">
+                    <img src="../../assets/img/blo9-70x70.jpg" alt="organic products">
+                    <img src="../../assets/img/blo8-70x70.jpg" alt="organic products">
+                    <img src="../../assets/img/blo7-70x70.jpg" alt="organic products">
+                    <img src="../../assets/img/blo4-70x70.jpg" alt="organic products">
+                    <img src="../../assets/img/blo3-70x70.jpg" alt="organic products">
+                </div>
             </div>
         </div>
     </section>
@@ -66,20 +79,46 @@ section.upper-footer {
         width: $small-container;
         margin: 0 auto;
         color: $white;
-        @include flex(row, space-between, center);
+        @include flex(row, space-between, start);
         gap: 30px;
         padding-top: $padding-large;
         padding-bottom: $padding-large;
-        
-        img {
-            width: 65px;
-            height: 65px;
-            object-fit: cover;
+
+        p.title {
+            font-size: $font-medium;
+            font-weight: 800;
+            margin-bottom: $margin-bottom-small;
         }
+
+        img.logo {
+            width: 70%;
+            margin-bottom: $margin-bottom-small; 
+        }
+
+        p.text {
+            font-size: $font-small;
+            margin-bottom: $margin-bottom-smaller;            
+        }
+
+        ul {
+            list-style: none;
+            font-size: $font-small;
+
+            li {
+                margin-bottom: $margin-bottom-smaller;
+            }
+        }
+        
         div.blog-container {
-            @include flex(row, center, center);
+            @include flex(row, center, start);
             gap: 20px;
             margin-bottom: $margin-bottom-smaller;
+            
+            img {
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+            }
 
             p {
                 font-size: $font-small;
@@ -89,6 +128,16 @@ section.upper-footer {
                 font-weight: 600;
                 font-size: .85rem;
                 margin-bottom: .25rem;
+            }
+        }
+
+        div.gallery-container {
+            @include flex(row, space-between, start);
+            flex-wrap: wrap;
+            gap: 5px;
+
+            img {
+                width: calc((100% / 3) - 5px);
             }
         }
     }

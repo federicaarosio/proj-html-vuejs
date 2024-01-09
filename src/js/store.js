@@ -25,5 +25,29 @@ export const store = reactive({
             title: "If we as a society are willing to have a preference for organic food farmer.",
             content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti maiores quasi at quam, omnis distinctio repudiandae. Doloribus at aliquam earum? Voluptates deserunt iure non sunt delectus quaerat eum quia tempore."
         },
+    ],
+
+    //Footer
+    footerLinks: [
+        {
+            content: "Organic Food Shop",
+            url: "#",
+        },
+        {
+            content: "Our Term & Condition",
+            url: "#",
+        },
+        {
+            content: "Gogrin Faq Selection",
+            url: "#",
+        },
+        {
+            content: "Our Team Member",
+            url: "#",
+        },
+        {
+            content: "Our Latest News Feed",
+            url: "#",
+        },
     ]
 });
