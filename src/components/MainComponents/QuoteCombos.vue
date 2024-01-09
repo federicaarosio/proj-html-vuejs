@@ -15,8 +15,24 @@
             </p>
         </section>
         <section class="shop-combos">
-            <img src="../../assets/img/offer-img01.jpg">
-            <img src="../../assets/img/offer-img02.jpg">
+            <div class="img-container">
+                <img src="../../assets/img/offer-img01.jpg">
+                <p class="combo">
+                    Fresh Garden Tomato<br>combo offer... $37
+                </p>
+                <p class="shop-now">
+                    Shop now
+                </p>
+            </div>
+            <div class="img-container">
+                <img src="../../assets/img/offer-img02.jpg">
+                <p class="combo">
+                    Some organic healthy fruits<br>combo offer... $49
+                </p>
+                <p class="shop-now">
+                    Shop now
+                </p>
+            </div>
         </section>
     </section>
 </template>
@@ -49,10 +65,17 @@ section.quote {
     p.quote-text {
         font-size: $font-medium;
         margin-bottom: $margin-bottom-small;
+        line-height: 1.8rem;
+    }
+
+    p.author {
+        font-weight: 700;
     }
 
     p.role {
         font-size: $font-small;
+        font-weight: 700;
+        color: $accent-color;
         margin-bottom: $margin-bottom-large;
     }
 }
@@ -61,9 +84,33 @@ section.shop-combos {
     @include flex(row, space-between, center);
     gap: 20px;
 
-    img {
+    div.img-container {
+        position: relative;
         width: calc(100% / 2);
+
+        img {
+            width: 100%;
+        }
+
+        p {
+            position: absolute;
+            left: 20px;
+            color: $white;
+            font-weight: 800;
+        }
+
+        .combo {
+            top: 20px;
+            font-size: 1.6rem;
+            text-align: left;
+        }
+
+        .shop-now {
+            bottom: 20px;
+            text-transform: uppercase;
+        }
     }
 }
+        
     
 </style>
