@@ -20,6 +20,10 @@ button {
     border-bottom-left-radius: 20px;
 }
 
+.btn-green {
+    background-color: $main-color;
+}
+
 div.section-title {
     position: relative;
     margin-bottom: $margin-bottom-small;
@@ -49,7 +53,7 @@ div.section-title {
         text-transform: uppercase;
         position: relative;
         z-index: 2;
-        margin-bottom: $margin-medium;
+        margin-bottom: $margin-bottom-small;
         
         span {
             color: $accent-color;

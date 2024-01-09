@@ -49,12 +49,9 @@ section.trending-food {
     margin-bottom: $margin-bottom-large;
     text-align: center;
 
-    
-
     div.cards-container {
         @include flex(row, space-between, start);
         gap: 20px;
     }
-}
-    
+} 
 </style>

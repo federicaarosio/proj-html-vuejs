@@ -4,6 +4,7 @@
     <QuoteCombos />
     <StatsSection />
     <TrendingFood />
+    <CallToaction />
     <NewsFeed />
     <FarmLogos />
 </template>
@@ -14,6 +15,7 @@ import OnlineStore from './MainComponents/OnlineStore.vue';
 import QuoteCombos from './MainComponents/QuoteCombos.vue';
 import StatsSection from './MainComponents/StatsSection.vue';
 import TrendingFood from './MainComponents/TrendingFood.vue';
+import CallToaction from './MainComponents/CallToaction.vue';
 import NewsFeed from './MainComponents/NewsFeed.vue';
 import FarmLogos from './MainComponents/FarmLogos.vue';
 
@@ -24,6 +26,7 @@ export default {
         QuoteCombos,
         StatsSection,
         TrendingFood,
+        CallToaction,
         NewsFeed,
         FarmLogos
     },

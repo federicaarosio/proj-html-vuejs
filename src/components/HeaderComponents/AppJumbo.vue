@@ -28,7 +28,7 @@
             <button class="about-us">
                 About Us
             </button>
-            <button class="history">
+            <button class="history btn-green">
                 Our History
             </button>
         </div>
@@ -129,7 +129,6 @@ section.jumbo {
 
         button.history {
             text-transform: uppercase;
-            background-color: $main-color;
             margin-left: 2rem;
             padding: 15px 40px;
         }
