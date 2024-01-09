@@ -25,7 +25,7 @@ div.container {
     margin: 0 auto;
     @include flex(row, center, center);
     gap: 50px;
-    margin-bottom: $margin-bottom-large;
+    margin-bottom: $margin-larger;
 
 
     img {

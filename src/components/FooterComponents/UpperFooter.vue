@@ -92,7 +92,7 @@ section.upper-footer {
         color: $white;
         @include flex(row, space-between, start);
         gap: 30px;
-        padding-top: $padding-large;
+        padding-top: $padding-larger;
         padding-bottom: $padding-large;
 
         div.column {
