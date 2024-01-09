@@ -1,11 +1,10 @@
 <template lang="">
-    <div>
-        S L I D E R
-    </div>
     <div class="container" v-show="visibleSlide === index" >
         <img :src="src">
     </div>
 </template>
+
+
 <script>
 export default {
     name: "SingleSliderimg",
@@ -29,6 +28,16 @@ export default {
     
 }
 </script>
-<style lang="">
+
+
+<style lang="scss" scoped>
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+img {
+        width: 100%;
+        height: 550px;
+        object-fit: cover;
+    }
     
 </style>
