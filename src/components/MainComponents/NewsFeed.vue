@@ -74,45 +74,6 @@ section.news {
     @include flex(column, center, center);
     margin-bottom: $margin-bottom-large;
 
-    div.section-title {
-        position: relative;
-        margin-bottom: $margin-bottom-small;
-        
-        img {
-            position: absolute;
-            top: 0%;
-            left: 50%;
-            transform: translate(-50%, -30%);
-            z-index: 1;
-        }
-        
-        .upper-title {
-            font-size: $font-medium;
-            font-weight: 800;
-            color: $accent-color;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-    
-        .lower-title {
-            font-size: $font-big;
-            font-weight: 900;
-            color: $main-color;
-            text-align: center;
-            text-transform: uppercase;
-            position: relative;
-            z-index: 2;
-            margin-bottom: $margin-bottom-small;
-            
-            span {
-                color: $accent-color;
-            }
-        }
-
-
-    }
-
     div.feed-container {
         @include flex(row, space-between, start);
         gap: 20px;

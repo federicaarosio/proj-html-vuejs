@@ -1,11 +1,13 @@
 <template lang="">
     <section class="online-store">
-        <p class="smaller-title">
-            Trending Online Store
-        </p>
-        <p class="title">
-            Gogrin All <span>Organic</span> Food
-        </p>
+        <div class="section-title">
+            <p class="upper-title">
+                Trending online store
+            </p>
+            <p class="lower-title ">
+                Gogrin all <span>organic</span> food
+            </p>
+        </div>
         <ul>
             <li>
                 All product
@@ -120,20 +122,10 @@ section.online-store {
     padding-bottom: $margin-bottom-large;
     margin-bottom: $margin-bottom-large;
 
-    p.smaller-title {
-        font-size: 1.2rem;
-        color: $accent-color;
+    p.lower-title {
+        color: $white;
     }
 
-    p.title {
-        font-size: $font-big;
-        text-transform: uppercase;
-        margin-bottom: $margin-bottom-small;
-
-        span {
-            color: $accent-color;
-        }
-    }
 
     ul {
         @include flex(row, center, center);
