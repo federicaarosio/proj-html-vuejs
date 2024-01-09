@@ -7,7 +7,18 @@
                     We should never be entered upon until every agency of peace has failed not to be good
                 </p>
                 <div class="socials">
-                    <i class="fa-brands fa-facebook-f"></i>
+                    <div class="icon-container">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </div>
                 </div>
             </div>
             <div class="column">
@@ -84,30 +95,49 @@ section.upper-footer {
         padding-top: $padding-large;
         padding-bottom: $padding-large;
 
-        p.title {
-            font-size: $font-medium;
-            font-weight: 800;
-            margin-bottom: $margin-bottom-small;
-        }
+        div.column {
+            max-width: 25%;
 
-        img.logo {
-            width: 70%;
-            margin-bottom: $margin-bottom-small; 
-        }
+            p.title {
+                font-size: $font-medium;
+                font-weight: 800;
+                margin-bottom: $margin-bottom-small;
+            }
+    
+            img.logo {
+                width: 70%;
+                margin-bottom: $margin-bottom-small; 
+            }
 
-        p.text {
-            font-size: $font-small;
-            margin-bottom: $margin-bottom-smaller;            
-        }
-
-        ul {
-            list-style: none;
-            font-size: $font-small;
-
-            li {
+            p.text {
+                font-size: $font-small;
                 margin-bottom: $margin-bottom-smaller;
+                line-height: 1.2rem;            
+            }
+
+            div.socials {
+                @include flex(row, start, center);
+                gap: 10px;
+
+                div.icon-container {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 5px;
+                    background-color: $main-color;
+                    @include flex(row, center, center);
+                }
+            }
+    
+            ul {
+                list-style: none;
+                font-size: $font-small;
+    
+                li {
+                    margin-bottom: $margin-bottom-smaller;
+                }
             }
         }
+
         
         div.blog-container {
             @include flex(row, center, start);

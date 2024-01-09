@@ -114,7 +114,7 @@ section.news {
     }
 
     div.feed-container {
-        @include flex(row, space-between, center);
+        @include flex(row, space-between, start);
         gap: 20px;
         flex-wrap: wrap;
     }
