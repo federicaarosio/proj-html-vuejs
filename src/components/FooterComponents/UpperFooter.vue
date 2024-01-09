@@ -19,6 +19,17 @@
                 <p class="title">
                     Our latest blog.
                 </p>
+                <div class="blog-container" v-for="post in store.postsList">
+                    <img :src="`../../../img/${post.imageSource}.jpg`">
+                    <div class="text-wrapper">
+                        <p class="post-title">
+                            {{post.title}}
+                        </p>
+                        <p class="date">
+                            {{post.date}}
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="column">
                 <p class="title">
@@ -56,11 +67,29 @@ section.upper-footer {
         margin: 0 auto;
         color: $white;
         @include flex(row, space-between, center);
+        gap: 30px;
         padding-top: $padding-large;
         padding-bottom: $padding-large;
+        
+        img {
+            width: 65px;
+            height: 65px;
+            object-fit: cover;
+        }
+        div.blog-container {
+            @include flex(row, center, center);
+            gap: 20px;
+            margin-bottom: $margin-bottom-smaller;
 
-        div.column {
-            // width: calc(100% / 4);
+            p {
+                font-size: $font-small;
+            }
+
+            p.post-title {
+                font-weight: 600;
+                font-size: .85rem;
+                margin-bottom: .25rem;
+            }
         }
     }
 }
