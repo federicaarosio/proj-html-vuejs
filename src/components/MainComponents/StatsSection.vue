@@ -41,6 +41,7 @@ section.stats {
     height: 200px;
     @include flex(row, center, center);
     gap: 30px;
+    margin-bottom: $margin-bottom-large;
 
     div.container {
         @include flex(column, center, center);
