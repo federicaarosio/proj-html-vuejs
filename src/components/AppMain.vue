@@ -4,6 +4,7 @@
     <QuoteCombos />
     <StatsSection />
     <NewsFeed />
+    <FarmLogos />
 </template>
 
 <script>
@@ -12,6 +13,7 @@ import OnlineStore from './MainComponents/OnlineStore.vue';
 import QuoteCombos from './MainComponents/QuoteCombos.vue';
 import StatsSection from './MainComponents/StatsSection.vue';
 import NewsFeed from './MainComponents/NewsFeed.vue';
+import FarmLogos from './MainComponents/FarmLogos.vue';
 
 export default {
     components: {
@@ -20,6 +22,7 @@ export default {
         QuoteCombos,
         StatsSection,
         NewsFeed,
+        FarmLogos
     },
     
 }

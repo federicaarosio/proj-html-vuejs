@@ -70,6 +70,7 @@ section.news {
     width: $small-container;
     margin: 0 auto;
     @include flex(column, center, center);
+    margin-bottom: $margin-bottom-large;
 
     div.section-title {
         position: relative;
