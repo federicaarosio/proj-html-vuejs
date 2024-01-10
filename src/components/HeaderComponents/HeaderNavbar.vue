@@ -32,8 +32,15 @@
 
             <div class="sub-container">
                 <div class="search-menu">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <button class="magnifier">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div class="shopping">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <p class="chart-items">
+                            0
+                        </p>
+                    </div>
                     <button>
                         order now
                     </button>
@@ -42,6 +49,7 @@
         </div>
     </section>
 </template>
+
 <script>
 export default {
     name: "HeaderNavbar",
@@ -74,6 +82,7 @@ export default {
     }
 }
 </script>
+
 <style lang="scss">
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
@@ -126,6 +135,39 @@ export default {
                 .search-menu {
                     @include flex(row, center, center);
                     gap: 20px;
+
+                    button {
+                        
+                    }
+
+                    .magnifier {
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        @include flex(row, center, center);
+                    }
+
+                    div.shopping {
+                        position: relative;
+                    }
+
+                    i.fa-cart-shopping {
+                        color: $main-color;
+                    }
+
+                    .chart-items {
+                        font-size: .6rem;
+                        background-color: $accent-color;
+                        padding: 5px;
+                        border-radius: 50%;
+                        width: 10px;
+                        height: 10px;
+                        @include flex(row, center, center);
+                        color: $white;
+                        position: absolute;
+                        top: -5px;
+                        right: -7px;
+                    }
 
                 }
             }
