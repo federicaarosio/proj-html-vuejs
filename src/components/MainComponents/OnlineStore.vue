@@ -32,6 +32,8 @@
             :src="product.imageSource"
             :name="product.productName"
             :price="product.price"
+            :discount="product.discount"
+            :originalPrice="product.originalPrice"
             />
 
             <button>
@@ -128,7 +130,7 @@ section.online-store {
 
 
     ul {
-        @include flex(row, center, center);
+        @include flex(row, center, start);
         gap: 20px;
         list-style: none;
         font-size: $font-small;
@@ -138,7 +140,7 @@ section.online-store {
     .shop-images-container {
         width: $small-container;
         margin: 0 auto;
-        @include flex(row, center, center);
+        @include flex(row, center, start);
         gap: 20px;
         flex-wrap: wrap;        
     }
