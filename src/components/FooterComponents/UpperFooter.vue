@@ -9,19 +9,19 @@
                 <div class="socials">
                     <button class="icon-container btn-green">
                         <i class="fa-brands fa-facebook-f"></i>
-                        <span>Facebook</span>
+                        <span class="tag">Facebook</span>
                     </button>
                     <button class="icon-container btn-green">
                         <i class="fa-brands fa-google-plus-g"></i>
-                        <span>Google+</span>
+                        <span class="tag">Google+</span>
                     </button>
                     <button class="icon-container btn-green">
                         <i class="fa-brands fa-twitter"></i>
-                        <span>Twitter</span>
+                        <span class="tag">Twitter</span>
                     </button>
                     <button class="icon-container btn-green">
                         <i class="fa-brands fa-pinterest-p"></i>
-                        <span>Pinterest</span>
+                        <span class="tag">Pinterest</span>
                     </button>
                 </div>
             </div>
@@ -130,23 +130,10 @@ section.upper-footer {
                     @include flex(row, center, center);
                     position: relative;
 
-                    &:hover span {
+                    &:hover span.tag {
                         display: block;
                     }
 
-                    span {
-                        position: absolute;
-                        top: 15px;
-                        left: 50%;
-                        transform: translateY(100%);
-                        font-size: $font-small;
-                        text-transform: none;
-                        display: none;
-                        background-color: #f8faf8;
-                        border-radius: 2px;
-                        color: $dark-gray;
-                        padding: 2px 5px;
-                    }
                 }
             }
     

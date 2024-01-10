@@ -16,6 +16,21 @@
                 <div class="sale-tag" v-show="discount === true">
                     <span>Sale!</span>
                 </div>
+
+                <div class="buttons">
+                    <button>
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="tag">Wishlist</span>
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="tag">Shopping</span>
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-eye"></i>
+                        <span class="tag">Follow</span>
+                    </button>
+                </div>
         </article>
 </template>
 
@@ -42,9 +57,16 @@ export default {
     margin-bottom: $margin-bottom-small;
     position: relative;
 
+    &:hover div.buttons {
+        display: inline-block;
+        @include flex(row, center, center);
+        gap: 5px;
+    }
+
     img {
         width: 100%;
         margin-bottom: $margin-bottom-smaller;
+        
     }
 
     p.product-name {
@@ -68,6 +90,36 @@ export default {
         font-size: $font-small;
         text-transform: uppercase;
     }
+
+    div.buttons {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+        z-index: 3;
+
+        button {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            @include flex(row, center, center);
+            background-color: $white;
+            color: black;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            position: relative;
+    
+            &:hover {
+                background-color: $accent-color;
+                color: $white;
+            }
+
+            &:hover span.tag{
+                display: block;
+            }
+        }
+    }
+
 
 }
 </style>

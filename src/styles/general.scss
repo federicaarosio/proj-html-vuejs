@@ -72,3 +72,18 @@ div.section-title {
 
 
 }
+
+span.tag {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateY(100%);
+    font-size: $font-small;
+    text-transform: none;
+    display: none;
+    background-color: #f8faf8;
+    border-radius: 2px;
+    color: $dark-gray;
+    padding: 2px 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
