@@ -1,7 +1,4 @@
 <template lang="">
-    <!-- <div class="container" v-show="visibleSlide === index"  >
-        <img :src="src">
-    </div> -->
     <div class="container">
         <img :src="src">
     </div>     

@@ -28,6 +28,10 @@
             <button class="next" @click="nextSlide">
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
+
+            <p class="fresh-fruits">
+                Fresh fruits
+            </p>
         </section>
 
         
@@ -103,6 +107,11 @@ export default {
 
     computed: {
     visibleImages() {
+        if (this.visibleSlide > this.itemsPerPage ) {
+            this.visibleSlide = 0;
+        } else if (this.visibleSlide <= 0) {
+            this.visibleSlide = this.itemsPerPage
+        }
       return this.sliderImages.slice(this.visibleSlide, this.visibleSlide + this.itemsPerPage);
     },
   },
@@ -125,20 +134,43 @@ section.container {
     margin-bottom: $margin-bottom-small;
     position: relative;
 
+    &:hover p {
+        display: block;
+    }
+
+    &:hover button {
+        display: block;
+    }
+
     button {
         position: absolute;
+        border-radius: 0;
+        display: none;
+
     }
 
     button.prev {
         top: 50%;
-        left: -10px;
+        left: -20px;
         transform: translateY(-50%);
+
     }
 
     button.next {
         top: 50%;
-        right: -10px;
+        right: -20px;
         transform: translateY(-50%);
+    }
+
+    p.fresh-fruits {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: $accent-color;
+        display: none;
+        z-index: 2;
     }
 
     div.sub-container {

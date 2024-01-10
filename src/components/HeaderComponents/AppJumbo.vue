@@ -98,7 +98,6 @@ section.jumbo {
         font-size: 2rem;
     }
 
-    
     button.prev {
         left: 50px;
     }
