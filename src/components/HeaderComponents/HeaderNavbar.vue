@@ -43,10 +43,6 @@ export default {
             type: Array,
             required: true
         },
-        subLinks: {
-            type: Array,
-            required: false
-        },
     },
 
     methods: {
