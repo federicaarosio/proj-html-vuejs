@@ -127,8 +127,11 @@ export default {
 
                         li:hover {
                             color: $accent-color;
-
                         }
+                    }
+
+                    .fa-chevron-down {
+                        margin-left: .3rem;
                     }
                 }
 
