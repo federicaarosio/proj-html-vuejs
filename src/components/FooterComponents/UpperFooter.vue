@@ -7,18 +7,22 @@
                     We should never be entered upon until every agency of peace has failed not to be good
                 </p>
                 <div class="socials">
-                    <div class="icon-container">
+                    <button class="icon-container btn-green">
                         <i class="fa-brands fa-facebook-f"></i>
-                    </div>
-                    <div class="icon-container">
+                        <span>Facebook</span>
+                    </button>
+                    <button class="icon-container btn-green">
                         <i class="fa-brands fa-google-plus-g"></i>
-                    </div>
-                    <div class="icon-container">
+                        <span>Google+</span>
+                    </button>
+                    <button class="icon-container btn-green">
                         <i class="fa-brands fa-twitter"></i>
-                    </div>
-                    <div class="icon-container">
+                        <span>Twitter</span>
+                    </button>
+                    <button class="icon-container btn-green">
                         <i class="fa-brands fa-pinterest-p"></i>
-                    </div>
+                        <span>Pinterest</span>
+                    </button>
                 </div>
             </div>
             <div class="column">
@@ -119,12 +123,30 @@ section.upper-footer {
                 @include flex(row, start, center);
                 gap: 10px;
 
-                div.icon-container {
+                button.icon-container {
                     width: 30px;
                     height: 30px;
                     border-radius: 5px;
-                    background-color: $main-color;
                     @include flex(row, center, center);
+                    position: relative;
+
+                    &:hover span {
+                        display: block;
+                    }
+
+                    span {
+                        position: absolute;
+                        top: 15px;
+                        left: 50%;
+                        transform: translateY(100%);
+                        font-size: $font-small;
+                        text-transform: none;
+                        display: none;
+                        background-color: #f8faf8;
+                        border-radius: 2px;
+                        color: $dark-gray;
+                        padding: 2px 5px;
+                    }
                 }
             }
     

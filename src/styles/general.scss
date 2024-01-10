@@ -18,10 +18,20 @@ button {
     text-transform: uppercase;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
+
+    &:hover {
+        background-color: $main-color;
+        transition: .25s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
 }
 
 .btn-green {
     background-color: $main-color;
+
+    &:hover {
+        background-color: $accent-color;
+        transition: .25s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
 }
 
 div.section-title {

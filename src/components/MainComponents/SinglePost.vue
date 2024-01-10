@@ -48,6 +48,10 @@ article {
     img {
         width: 100%;
         margin-bottom: $margin-bottom-smaller;
+
+        &:hover {
+            filter: brightness(50%);
+        }
     }
 
     div {
