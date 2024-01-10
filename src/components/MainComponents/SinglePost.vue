@@ -44,14 +44,16 @@ export default {
 article {
     width: calc((100% / 3) - 20px);
     margin-bottom: $margin-bottom-small;
+
+    &:hover img {
+            filter: brightness(50%);
+        }
     
     img {
         width: 100%;
         margin-bottom: $margin-bottom-smaller;
 
-        &:hover {
-            filter: brightness(50%);
-        }
+
     }
 
     div {

@@ -2,6 +2,7 @@ import { reactive } from 'vue'
 
 export const store = reactive({
     
+    //MAIN
     //Product List (Online Store, Trending Food)
     productsList: [
         {
@@ -95,7 +96,7 @@ export const store = reactive({
         },
     ],
 
-    //Footer
+    //FOOTER
     footerLinks: [
         {
             content: "Organic Food Shop",
