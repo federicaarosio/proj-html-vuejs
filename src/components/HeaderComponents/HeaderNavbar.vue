@@ -85,11 +85,12 @@ export default {
             font-size: $font-small;
             text-transform: uppercase;
             font-weight: 600;
+            position: relative;
 
             .sub-container {
                 @include flex(row, center, center);
                 gap: 70px;
-                position: relative;
+                
 
                 ul {
                     list-style: none;
@@ -103,12 +104,18 @@ export default {
 
                     ul.child-menu {
                         position: absolute;
-                        bottom: -50%;
-                        transform: translateY(50%);
-                        z-index: 2;
+                        bottom: -100%;
+                        z-index: 1;
+                        min-width: 200px;
                         background-color: $white;
                         padding: $padding-smaller;
-                        border: 2px solid red;
+                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                        @include flex(column, start, start);
+
+                        li:hover {
+                            color: $accent-color;
+
+                        }
                     }
                 }
 
