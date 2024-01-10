@@ -134,10 +134,6 @@ section.container {
     margin-bottom: $margin-bottom-small;
     position: relative;
 
-    &:hover p {
-        display: block;
-    }
-
     &:hover button {
         display: block;
     }
@@ -170,7 +166,7 @@ section.container {
         font-weight: 800;
         color: $accent-color;
         display: none;
-        z-index: 2;
+        z-index: 4;
     }
 
     div.sub-container {
@@ -201,6 +197,10 @@ section.container {
         font-weight: 800;
         color: $main-color;
     }
+}
+
+section.container:hover p {
+    display: block;
 }
 
     
