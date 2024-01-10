@@ -24,7 +24,8 @@
             </div>
         </section>
 
-        <HeaderNavbar  :navLinks="navLinks"/>
+        <HeaderNavbar 
+        :navLinks="navLinks"/>
         <AppJumbo />
     
     </section>
@@ -46,30 +47,77 @@ export default {
                 {
                     content: 'Home',
                     url: '#',
+                    submenu: true,
+                    children: [
+                        {
+                            content: 'Home-1'
+                        },
+                        {
+                            content: 'Home-2'
+                        },
+                    ]
                 },
                 {
                     content: 'About',
                     url: '#',
+                    submenu: true,
+                    children: [
+                        {
+                            content: 'About-1'
+                        },
+                        {
+                            content: 'About-2'
+                        },
+                    ]
                 },
                 {
                     content: 'Service',
                     url: '#',
+                    submenu: false,
                 },
                 {
                     content: 'Portfolio',
                     url: '#',
+                    submenu: true,
+                    children: [
+                        {
+                            content: 'Portfolio-1'
+                        },
+                        {
+                            content: 'Portfolio-2'
+                        },
+                    ]
                 },
                 {
                     content: 'Shop',
                     url: '#',
+                    submenu: true,
+                    children: [
+                        {
+                            content: 'Shop-1'
+                        },
+                        {
+                            content: 'Shop-2'
+                        },
+                    ]
                 },
                 {
                     content: 'Blog',
                     url: '#',
+                    submenu: true,
+                    children: [
+                        {
+                            content: 'Blog-1'
+                        },
+                        {
+                            content: 'Blog-2'
+                        },
+                    ]
                 },
                 {
                     content: 'Contact',
                     url: '#',
+                    submenu: false,
                 },
             ],
         }
