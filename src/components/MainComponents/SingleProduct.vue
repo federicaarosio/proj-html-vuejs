@@ -6,9 +6,9 @@
                 </p>
                 <p class="product-price">
                     <span class="original-price" v-show="discount === true">
-                    ${{originalPrice}}
+                        ${{originalPrice}}
                     </span>
-                    <span>
+                    <span class="actual-price">
                         ${{price}}
                     </span>
                 </p>
@@ -81,15 +81,7 @@ export default {
             filter: opacity(50%);
         }
     }
-    div.sale-tag span {
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        background-color: $accent-color;
-        padding: .25rem .5rem;
-        font-size: $font-small;
-        text-transform: uppercase;
-    }
+
 
     div.buttons {
         position: absolute;

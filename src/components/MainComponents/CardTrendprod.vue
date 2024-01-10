@@ -5,8 +5,17 @@
             {{name}}
         </p>
         <p class="price">
-            {{price}}
+            <span class="original-price" v-show="discount === true">
+                ${{originalPrice}}
+            </span>
+            <span class="actual-price">
+                ${{price}}
+            </span>
         </p>
+
+        <div class="sale-tag" v-show="discount === true">
+            <span>Sale!</span>
+        </div>
     </article>
 </template>
 
@@ -18,7 +27,9 @@ export default {
     props: {
         src: String,
         name: String,
-        price: Number
+        price: Number,
+        originalPrice: Number,
+        discount: Boolean
     }
 
 }
@@ -32,6 +43,7 @@ export default {
 article {
     width: calc(100% / 4);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
 
     img {
         width: 100%;
@@ -46,6 +58,15 @@ article {
     p.price {
         margin-bottom: $margin-bottom-smaller;
         font-size: $font-small;
+        color: $light-gray;
+    }
+
+    span.original-price {
+        text-decoration: line-through;
+    }
+
+    span.actual-price {
+        text-decoration: underline;
     }
 }
 

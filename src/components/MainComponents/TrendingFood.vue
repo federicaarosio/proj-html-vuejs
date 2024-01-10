@@ -14,6 +14,8 @@
             :src="product.imageSource"
             :name="product.productName"
             :price="product.price"
+            :discount="product.discount"
+            :originalPrice="product.originalPrice"
             />
         </div>
     </section>

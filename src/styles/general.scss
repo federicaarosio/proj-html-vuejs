@@ -73,6 +73,18 @@ div.section-title {
 
 }
 
+div.sale-tag span {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: $accent-color;
+    padding: .25rem .5rem;
+    font-size: $font-small;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $white;
+}
+
 span.tag {
     position: absolute;
     top: 15px;
