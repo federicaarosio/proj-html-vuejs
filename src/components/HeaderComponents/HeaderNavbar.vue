@@ -4,12 +4,20 @@
             <div class="sub-container">
                 <img src="../../assets/img/logo.png" alt="logo Gogrin" class="logo" >
                 <ul class="menu">
-                    <li class="menu-list" v-for="(item, index) in navLinks" :key="index" @mouseover="showDropdown(item)">
+                    <!-- <li class="menu-list" v-for="(item, index) in navLinks" :key="index" @mouseover="showDropdown(item)">
                         <div class="item-menu">
-                            <!-- <span @click="toggleDropdown(item)"> -->
+                            <span @click="toggleDropdown(item)">
                                 {{item.content}}
                                 <span v-show="item.submenu === true"><i class="fa-solid fa-chevron-down"></i></span>
-                            <!-- </span> -->
+                            </span> -->
+
+                    <li class="menu-list" v-for="(item, index) in navLinks" :key="index">
+                        <div class="item-menu">
+                            <span @click="toggleDropdown(item)">
+                                {{item.content}}
+                                <span v-show="item.submenu === true"><i class="fa-solid fa-chevron-down"></i></span>
+                            </span>
+                        
                         </div>
                         <ul v-if="item.children && item.showDropdown" @mouseleave="hideDropdown(item)" class="child-menu">
                             <li v-for="(child, childIndex) in item.children" :key=" childIndex">
